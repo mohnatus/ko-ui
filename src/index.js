@@ -1,6 +1,7 @@
 const { applyBindings, observable } = require('knockout');
 import './pages/lists';
 import './pages/selects';
+import './pages/buttons';
 
 document.addEventListener('DOMContentLoaded', () => {
 	const app = document.getElementById('app');
@@ -11,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			menu: [
 				{ id: 'lists', name: 'Списки' },
 				{ id: 'selects', name: 'Селекты' },
+				{ id: 'buttons', name: 'Кнопки' },
 			],
 		},
 		app
