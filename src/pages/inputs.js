@@ -5,18 +5,15 @@ import { registerBinding } from '@/interface/engine/register-binding';
 import * as Input from '@/interface/components/input';
 import DynamicInput from '@/interface/bindings/dynamic-input';
 
-registerComponent("c-input", Input);
-registerBinding('dynamicInput', DynamicInput)
+registerComponent('c-input', Input);
+registerBinding('dynamicInput', DynamicInput);
 
 registerComponent('page-inputs', {
 	model: () => {
-
-
 		return {
-      value: observable(''),
-      value2: observable(''),
-      value3: observable(''),
-
+			value: observable(''),
+			value2: observable(''),
+			value3: observable(''),
 		};
 	},
 	template: `
@@ -26,6 +23,8 @@ registerComponent('page-inputs', {
       <c-input params="value: value, placeholder: 'Placeholder'"></c-input>
       <c-input params="value: value2, placeholder: 'Placeholder', clearable: true,
         maxLength: 100, counter: true"></c-input>
+      <c-input params="value: value3, placeholder: 'Search', clearable: true,
+        prependIcon: { name: 'i-search', size: 20}"></c-input>
 
       <input data-bind="dynamicInput" placeholder="Placeholder" />
   `,
