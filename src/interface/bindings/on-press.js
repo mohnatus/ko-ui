@@ -1,7 +1,6 @@
 import { usePress } from '@/interface/interactions/use-press';
 import { onBindingDispose } from '@/interface/engine/on-binding-dispose';
 
-
 function handler(
 	element,
 	valueAccessor,
@@ -9,9 +8,9 @@ function handler(
 	viewModel,
 	bindingContext
 ) {
-	const params = valueAccessor() || {};
+	const onPress = valueAccessor();
 
-	const cb = usePress(element, params.onPress);
+	const cb = usePress(element, onPress);
 
 	if (cb) {
 		onBindingDispose(() => {
