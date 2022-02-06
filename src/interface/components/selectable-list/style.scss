@@ -1,0 +1,33 @@
+:root {
+  --list-level-offset: 20px;
+}
+
+.list {
+  &__item {
+    cursor: pointer;
+    &:hover {
+      background: #eee;
+    }
+    &.selected {
+      background: #eee;
+    }
+    &.inactive {
+      cursor: default;
+
+      &:hover {
+        background: transparent;
+      }
+    }
+    &.disabled {
+      opacity: 0.5;
+      pointer-events: none;
+      cursor: default;
+
+      &:hover {
+        background: transparent;
+      }
+    }
+
+
+  }
+}
