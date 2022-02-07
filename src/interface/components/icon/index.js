@@ -1,3 +1,4 @@
+
 /**
  * Svg-иконка
  *
@@ -6,7 +7,9 @@
  * height {Number}
  * size {Number}
  * color {String}
+ * componentName {string}
  */
+
 
 import model from "./model";
 import template from "./template";

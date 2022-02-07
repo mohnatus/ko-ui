@@ -31,6 +31,7 @@ export default (params) => {
 		clearable,
 		withCounter: !!counter,
 		charsLeft: computed(() => {
+			if (!counter) return;
 			return toJS(maxLength) - toJS(value).length;
 		}),
 		inputAttrs: {

@@ -19,13 +19,13 @@ export function Ref() {
 	}
 
 	return {
+		element,
 		isRef: true,
 		apply(cb) {
 			return get().then((el) => cb(el));
 		},
 		applyImmediately(cb) {
 			let el = element();
-			console.log('apply', el);
 			if (el) return cb(el);
 			return null;
 		},

@@ -1,4 +1,14 @@
 export default `
+<!-- ko if: componentName -->
+<!-- ko component: { name: componentName, params: {
+  width: width,
+  height: height,
+  color: color,
+} } -->
+<!-- /ko -->
+<!-- /ko -->
+
+<!-- ko ifnot: componentName -->
 <svg class="svg-icon" data-bind="attr: {
   width: width,
   height: height,
@@ -10,4 +20,5 @@ export default `
     'xlink:href': href
   }"></use>
 </svg>
+<!-- /ko -->
 `;

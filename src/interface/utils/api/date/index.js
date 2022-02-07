@@ -82,3 +82,20 @@ export function getDaysDiff(date1, date2) {
 	let diff = cloneDate(date2) - cloneDate(date1);
 	return diff / 1000 / 60 / 60 / 24;
 }
+
+export function formatDate(date) {
+	let day = date.getDate().toString().padStart(2, '0');
+	let month = (date.getMonth() + 1).toString().padStart(2, '0');
+	let year = date.getFullYear();
+
+	return `${day}.${month}.${year}`;
+}
+
+export function dateFromString(string = '') {
+	if (string.length !== 10) return false;
+	let [day, month, year] = string.split('.');
+	let dateString = `${month}-${day}-${year}`;
+	let isValid = !isNaN(Date.parse(dateString));
+	if (!isValid) return false;
+	return new Date(dateString);
+}

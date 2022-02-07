@@ -1,9 +1,10 @@
 import { computed, toJS } from 'knockout';
 
 export default (params) => {
-	const { name, width, height, size, color } = params;
+	const { name, width, height, size, color, componentName } = params;
 
 	return {
+		componentName,
     color,
 		href: computed(() => {
       return '#' + toJS(name)
