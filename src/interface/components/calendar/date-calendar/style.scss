@@ -1,0 +1,30 @@
+:root {
+  --calendar-day-size: 40px;
+}
+
+.calendar {
+
+
+  &__days {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(7 * var(--calendar-day-size));
+  }
+
+  &__day {
+    width: var(--calendar-day-size);
+    height: var(--calendar-day-size);
+  }
+
+  &-day {
+    &.inactive {
+      opacity: 0.5;
+    }
+    &.selected {
+      background: lightblue;
+    }
+    &.fixed {
+      background: blue;
+    }
+  }
+}

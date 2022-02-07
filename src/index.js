@@ -3,15 +3,15 @@ import './pages/lists';
 import './pages/selects';
 import './pages/buttons';
 import './pages/inputs';
+import './pages/calendars';
 
 document.addEventListener('DOMContentLoaded', () => {
 	const app = document.getElementById('app');
 
-  const activePage = observable(location.hash.slice(1));
-  activePage.subscribe(v => {
-    location.hash = v;
-  })
-
+	const activePage = observable(location.hash.slice(1));
+	activePage.subscribe((v) => {
+		location.hash = v;
+	});
 
 	applyBindings(
 		{
@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				{ id: 'selects', name: 'Селекты' },
 				{ id: 'buttons', name: 'Кнопки' },
 				{ id: 'inputs', name: 'Инпуты' },
+				{ id: 'calendars', name: 'Календари' },
 			],
 		},
 		app

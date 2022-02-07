@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <h1>Календари</h1>
+
+    <div>
+      <h1>Календари</h1>
+
+      <button data-bind="click: function() {
+        prevMonth(month1);
+      }">Prev</button>
+      <button data-bind="click: function() {
+        nextMonth(month1);
+      }">Next</button>
+      <date-calendar params="month: month1, selected: selectedDate, onSelect: onSelectDate"></date-calendar>
+      <br>
+      <button data-bind="click: function() {
+        prevMonth(month2);
+      }">Prev</button>
+      <button data-bind="click: function() {
+        nextMonth(month2);
+      }">Next</button>
+      <period-calendar params="month: month2,
+        from: from, to: to, onSelect: onSelectPeriod"></period-calendar>
+
+
+    </div>
+  </div>
+
+  <script src="./calendars.js"></script>
+</body>
+
+</html>
